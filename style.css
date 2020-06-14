@@ -1,0 +1,20 @@
+html {
+    margin-top: 3%;
+}
+
+#form-group{
+    display: block;
+}
+
+#form-group input{
+    margin-top: 1%;
+}
+
+#form-group textarea{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+table th, td {
+    color: blue !important;
+}
