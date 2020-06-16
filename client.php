@@ -14,8 +14,8 @@
         public function load_home(){
             $isExisted = $this -> database -> is_table_existed();
 
-            if ($this -> name || $this -> details){
-                if ($isExisted){
+            if ($this -> name || $this -> details){ // check inputs are valid at least one of them must be
+                if ($isExisted){ // check the table is exist
                     jsout("Table exists.");
                 }
                 else{
@@ -23,6 +23,7 @@
                 }
                 $this -> database -> insert_into_table($this -> name, $this -> details);
             }
+
             $this -> load_todos($this -> database -> fetch_todos());
         }
 

@@ -9,7 +9,7 @@
 
         public function fetch_todos(){
             try{
-                return $this -> database -> query("SELECT * FROM todo_list ORDER BY id DESC");
+                return $this -> database -> query("SELECT * FROM todo_list ORDER BY id DESC"); // get todos as reverse sorted from db
             }
             catch (Exception $error) { jsout($error); }
             finally { jsout("finally: fetch_todos"); }
@@ -42,5 +42,5 @@
         }
 
         public function is_table_existed(){ return $this -> database -> exec("SELECT 0 FROM todo_list"); }
-        }
+    }
 ?>
