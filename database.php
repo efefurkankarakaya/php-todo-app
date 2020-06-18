@@ -7,12 +7,20 @@
             $this -> database = $database;
         }
 
+        public function remove($id){
+            try{
+                $this -> database -> exec("DELETE FROM todo_list WHERE id = $id");
+            }
+            catch (Exception $error) { jsout($error); }
+            finally { jsout("finally: remove"); }
+        }
+
         public function commit_edits($id, $name, $details){
             try{
                 $this -> database -> exec("UPDATE todo_list 
                 SET name = '$name', 
                 details = '$details'
-                WHERE id = '$id'");
+                WHERE id = $id");
             }
             catch (Exception $error) { jsout($error); }
             finally { jsout("finally: commit_edits"); }

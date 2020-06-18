@@ -11,6 +11,15 @@
             $this -> details = $_POST["details"];
         }
 
+        public function send_remove_request(){
+            $id = $_POST["remove-submit"];
+            jsout($id);
+
+            if ($id){
+                $this -> database -> remove($id);
+            }
+        }
+
         public function send_edits(){
             $id = $_POST["id"];
             $edited_name = $_POST["edited_name"];
@@ -35,6 +44,7 @@
             }
 
             $this -> send_edits(); // sends edits if there are, before the page load
+            $this -> send_remove_request();
             $this -> load_todos($this -> database -> fetch_todos());
         }
 

@@ -14,7 +14,7 @@
             <div class="form-group" id="form-group">
                 <input id="name" name="name" type="text" class="form-control col-md-3" placeholder="Name">
                 <textarea id="details" name="details" type="text" class="form-control col-md-3" placeholder="Details"></textarea>
-                <button id="submit" name="submit" type="submit" class="btn btn-secondary">Submit</button>
+                <button name="submit" type="submit" class="btn btn-secondary">Submit</button>
             </div>
         </form>
     </div> 
@@ -32,6 +32,7 @@
         $client -> load_home();
     ?>    
     <script src="edit.js"></script>
+    <script src="remove.js"></script>
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
