@@ -7,6 +7,17 @@
             $this -> database = $database;
         }
 
+        public function commit_edits($id, $name, $details){
+            try{
+                $this -> database -> exec("UPDATE todo_list 
+                SET name = '$name', 
+                details = '$details'
+                WHERE id = '$id'");
+            }
+            catch (Exception $error) { jsout($error); }
+            finally { jsout("finally: commit_edits"); }
+        }
+
         public function fetch_todos(){
             try{
                 return $this -> database -> query("SELECT * FROM todo_list ORDER BY id DESC"); // get todos as reverse sorted from db

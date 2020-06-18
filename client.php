@@ -11,24 +11,35 @@
             $this -> details = $_POST["details"];
         }
 
+        public function send_edits(){
+            $id = $_POST["id"];
+            $edited_name = $_POST["edited_name"];
+            $edited_details = $_POST["edited_details"];
+            jsout("$id, $edited_name, $edited_details");
+            if ($edited_name || $edited_details){
+                $this -> database -> commit_edits($id, $edited_name, $edited_details);
+            }
+        }
+
         public function load_home(){
             $isExisted = $this -> database -> is_table_existed();
 
             if ($this -> name || $this -> details){ // check inputs are valid at least one of them must be
-                if ($isExisted){ // check the table is exist
+                if ($isExisted){ // check the table exists
                     jsout("Table exists.");
                 }
                 else{
                     $this -> database -> create_table();
                 }
-                $this -> database -> insert_into_table($this -> name, $this -> details);
+                $this -> database -> insert_into_table($this -> name, $this -> details); // inserts inputs if there is, before the page load
             }
 
+            $this -> send_edits(); // sends edits if there are, before the page load
             $this -> load_todos($this -> database -> fetch_todos());
         }
 
         private function load_todos($results){
-            echo "<table class='table container'>
+            echo "<table id='main-table' class='table container'>
                     <thead>
                         <tr>
                         <th class='text-muted' scope='col'>#</th>
@@ -48,8 +59,8 @@
                     <td class='text-muted'>$row[1]</td>
                     <td class='text-muted'>$row[2]</td>
                     <td class='text-muted'>$row[3]</td>
-                    <td class='text-light'><a class='btn btn-warning' href='index.php' name='edit'>Edit</a></td>
-                    <td class='text-dark'><a class='btn btn-danger' href='index.php' name='remove'>Remove</a></td>
+                    <td><a class='edit btn btn-warning text-dark' name='edit'>Edit</a></td>
+                    <td><a class='remove btn btn-danger text-light' name='remove'>Remove</a></td>
                     </tr>
                 </tbody>
                 ";
