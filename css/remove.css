@@ -1,0 +1,27 @@
+#frame{
+    border: 1px solid lightgray;
+    margin: auto;
+    width: 50%;
+    background: lightgray;
+    top: 30%;
+    right: 25%;
+    position: absolute;
+}
+#frame-header{
+    background-color: grey;
+}
+
+#frame-header a{
+    margin-top: 1%;
+    margin-left: 97%;
+    text-align: right;
+    background-color: darkred;
+    color: white;
+    border-radius: 20%;
+    text-decoration: none;
+}
+
+#frame-form-group input, button{
+    margin-top: 1%;
+    text-align: center;
+}
