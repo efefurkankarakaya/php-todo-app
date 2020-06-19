@@ -13,12 +13,12 @@ A web based to do list application. You can save your notes or make a to do list
 * SQLite 3
 
 # How To Install
-## For Ubuntu and its derivates
+## For Ubuntu and derivates
 * Install PHP 7.4: ```sudo apt install php7.4```
 * Install SQLite 3 for PHP 7.4: ```sudo apt install php7.4-sqlite3```
 * Create a folder that named "www" under "/home"
 * Run a terminal and run this code: ```php -S localhost:4000```
-* Clone this repository: ```git clone https://github.com/efefurkankarakaya/php-todo-app.git```
-* Run a browser and type on URL bar: ```localhost:4000/www/php-todo-app```
-
-// notes-app/index.php
+* Go to the folder which named as "www"
+* Clone this repository there: ```git clone https://github.com/efefurkankarakaya/notes-app.git```
+* Run a browser and type on URL bar: ```localhost:4000/www/notes-app/index.php```
+** Note: "www" folder is not required, you can clone it to Downloads folder and access by ```localhost:4000/Downloads/notes-app/index.php```
