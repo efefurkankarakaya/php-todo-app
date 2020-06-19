@@ -22,5 +22,5 @@ A web based to do list application. You can save your notes or make a to do list
 * Clone this repository there: ```git clone https://github.com/efefurkankarakaya/notes-app.git```
 * Run a browser and type on URL bar: ```localhost:4000/www/notes-app/index.php```
 <br />
-<b>NOTE:</b> "www" folder is not required, you can clone it to Downloads folder and access by ```localhost:4000/Downloads/notes-app/index.php```
+<b>NOTE:</b> "www" folder is not required, you can clone it to any folder (ex: Downloads) and access by ```localhost:4000/Downloads/notes-app/index.php```
 
