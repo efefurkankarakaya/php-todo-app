@@ -4,8 +4,8 @@ A web based to do list application. You can save your notes or make a to do list
 
 # Technologies
 
-* HTML5
-* CSS3
+* HTML 5
+* CSS 3
 * Bootstrap 4
 * Font Awesome 3
 * JavaScript
