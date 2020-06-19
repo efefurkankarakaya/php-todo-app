@@ -42,10 +42,10 @@
 
             $this -> send_edits(); // sends edits if there are, before the page load
             $this -> send_remove_request();
-            $this -> load_todos($this -> database -> fetch_todos());
+            $this -> load_notes($this -> database -> fetch_notes());
         }
 
-        private function load_todos($results){
+        private function load_notes($results){
             echo "<table id='main-table' class='table container'>
                     <thead>
                         <tr>
