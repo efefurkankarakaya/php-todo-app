@@ -22,7 +22,7 @@
             include "client.php";
             include "tools.php";
 
-            $sqlite_db = new SQLite3("database.db");
+            $sqlite_db = new SQLite3("db/database.db");
             $database = new Database($sqlite_db);
             $client = new Client($database);
 
