@@ -9,7 +9,7 @@
 
         public function remove($id){
             try{
-                $this -> database -> exec("DELETE FROM note_list WHERE id = $id");
+                $this -> database -> exec("DELETE FROM todo_list WHERE id = $id");
             }
             catch (Exception $error) { jsout($error); }
             // finally { jsout("finally: remove"); }
@@ -17,7 +17,7 @@
 
         public function commit_edits($id, $name, $details){
             try{
-                $this -> database -> exec("UPDATE note_list 
+                $this -> database -> exec("UPDATE todo_list 
                 SET 
                 name = '$name', 
                 details = '$details',
@@ -28,19 +28,19 @@
             // finally { jsout("finally: commit_edits"); }
         }
 
-        public function fetch_notes(){
+        public function fetch_todos(){
             try{
-                return $this -> database -> query("SELECT * FROM note_list ORDER BY id DESC"); // get notes as reverse sorted from db
+                return $this -> database -> query("SELECT * FROM todo_list ORDER BY id DESC"); // get todos as reverse sorted from db
             }
             catch (Exception $error) { jsout($error); }
-            // finally { jsout("finally: fetch_notes"); }
+            // finally { jsout("finally: fetch_todos"); }
         }
 
         public function insert_into_table($name, $details){
             // jsout("$name, $details");
             try{
                 $this -> database -> exec("INSERT INTO 
-                note_list (name, details) 
+                todo_list (name, details) 
                 VALUES ('$name', '$details');");
             }
             catch (Exception $error) { jsout($error); }
@@ -50,7 +50,7 @@
         public function create_table(){
             try{
                 $this -> database -> exec("CREATE TABLE 
-                note_list (
+                todo_list (
                     id INTEGER PRIMARY KEY,
                     name TEXT,
                     details TEXT,
@@ -63,6 +63,6 @@
             // finally { jsout("finally: create_table"); }
         }
 
-        public function is_table_existed(){ return $this -> database -> exec("SELECT 0 FROM note_list"); }
+        public function is_table_existed(){ return $this -> database -> exec("SELECT 0 FROM todo_list"); }
     }
 ?>
