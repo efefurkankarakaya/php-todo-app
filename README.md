@@ -27,5 +27,5 @@ A web based todo application. You can save, remove and / or edit your todos.
 ## For Linux Mint 19.3 Tricia
 * Install PHP 7.2: ```sudo apt install php```
 * Install SQLite 3 For PHP 7.2: ```sudo apt install php7.2-sqlite3```
-* Rest of instructions are same with installation on Ubuntu.
+* Rest of the instructions are same with installation on Ubuntu.
 
