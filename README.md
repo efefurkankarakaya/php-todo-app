@@ -13,7 +13,7 @@ A web based todo application. You can save, remove and / or edit your todos.
 * SQLite 3
 
 # How To Install
-## For Ubuntu
+## For Ubuntu 20.04
 * Install PHP 7.4: ```sudo apt install php7.4```
 * Install SQLite 3 for PHP 7.4: ```sudo apt install php7.4-sqlite3```
 * Create a folder that named "www" under "/home"
